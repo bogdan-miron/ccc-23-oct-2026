@@ -1,0 +1,12 @@
+# EXTRA stage (./setup_env.sh extra): NLP / CV / RL / optimization. Only needed if the task type calls for it.
+ortools
+rapidfuzz
+transformers
+tokenizers
+sentence-transformers
+opencv-python-headless
+pillow
+scikit-image
+timm
+gymnasium
+stable-baselines3

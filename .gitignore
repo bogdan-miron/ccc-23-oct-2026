@@ -1,0 +1,36 @@
+# Everything is ignored by default; only the kit is tracked. Contest data, PDFs, per-person solutions, outputs and notebooks stay local.
+/*
+!/.gitignore
+!/.gitattributes
+!/README.md
+!/CLAUDE.md
+!/AGENTS.md
+!/LESSONS.md
+!/requirements.txt
+!/requirements-extra.txt
+!/run.py
+!/run.sh
+!/setup_env.py
+!/setup_env.sh
+!/.claude/
+!/cf/
+!/tools/
+!/tests/
+!/knowledge/
+!/solutions/
+!/notes/
+!/notebooks/
+!/submissions/
+# working state inside tracked dirs
+/solutions/*/
+/notes/*
+/notebooks/*
+/submissions/*
+!/notes/.gitkeep
+!/notebooks/.gitkeep
+!/submissions/.gitkeep
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+catboost_info/
