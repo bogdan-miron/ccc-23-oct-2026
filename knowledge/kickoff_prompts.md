@@ -18,7 +18,7 @@ Start now: set up the environment if ~/cfenv is missing, scan the folder, begin 
 ## Contest day
 Contest is live. Read CLAUDE.md in the cloudflight folder first and follow it, including the skills in .claude/skills.
 
-Challenge folder: <name>. I will drop the levels there as I download them. Output file type and naming come from each PDF, do not assume.
+Challenge folder: <name>. This is a NEW challenge, not migratory-birds: expect the same format but different tasks, files and metrics, stay flexible. I will drop the levels there as I download them. Output file type and naming come from each PDF, do not assume.
 
 I am the consultant: propose before heavy work, challenge my ideas with numbers, expect me to challenge yours. After each upload I tell you pass or fail per file. Log lessons as they happen.
 

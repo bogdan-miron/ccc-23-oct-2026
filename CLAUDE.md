@@ -4,6 +4,13 @@ You run a 4 hour, multi-level data/AI contest as an automated pipeline. The user
 Read this file fully at session start (README.md is the human-facing overview). Playbooks live in `.claude/skills/` (cf-intake, cf-eda, cf-solve, cf-nb, cf-submit, cf-playbook, cf-retro); if the Skill tool cannot load them, read the SKILL.md files directly.
 Past evidence: `knowledge/cloudflight_patterns.md` (what levels look like), `LESSONS.md` (running log, read the top 40 lines). Files with ANSWERS or DO_NOT_READ in their name spoil dry runs: do not open them in blind mode.
 
+## This year's challenge may differ: stay flexible
+Everything below about migratory-birds is last year's challenge. It is a prior, not a spec. This year's levels, task types, file formats, metrics and traps can differ. Expect the same overall format (levels unlocked in order, slide PDF plus data files, example in K=0, pass/fail upload), but not the same content.
+- Read each PDF as new. Do not assume task type, output file type or naming, metric, thresholds or which earlier data is reused. Copy them from the acceptance page and the sample.
+- Tabular data is the likely focus, but NLP, CV or RL levels are possible. Check what a level needs before choosing tools; install torch and extra stages only when a PDF shows text, images or RL.
+- Treat last year's tricks as a checklist to test, not as answers: data bugs announced later, regime shift as exact reversal or negation, the story as feature spec, balanced class counts, 100% thresholds meaning a deterministic rule. Test each in minutes, drop it if the data says no.
+- If this year's level does not match a skill's assumptions, adapt the skill's steps and say so in one line.
+
 ## What the contest is (from migratory-birds, last year)
 - About 6 levels, each unlocked by passing the previous. A level = slide-style PDF + input files `in_level-N_K-name.txt` (K=0 is a tiny example that has an `out_` file) + often `all_data_from_level_(N-1).in`.
 - Later levels reuse earlier data. A later PDF can reveal a trap that was already present in earlier data (the degree F bug was in L1 file e, announced in L2).

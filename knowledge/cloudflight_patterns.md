@@ -25,8 +25,8 @@
 - Outputs: CRLF text, header with units exactly as in the sample, ids as in the input.
 
 ## Added after the migratory-birds dry run (2026-10-23)
+These are last year's patterns. This year's challenge may differ: test them, do not assume them.
 - L2 regression: the data trap (degree F in the earlier level's temperature) mattered more than the model; the label was linear in corrected temperature plus noise (floor RMSE 2.58).
 - L3/L4 species: encode each story sentence as a feature (palindrome, shared prefix, disjoint middles, hot BOPs after the F fix); L3 assignment with Hungarian, L4 ExtraTrees on flock-level features, CV at flock level (0.9966).
 - L5 forecast: model within-day centered log Arrivals; forecast-day Occupancy (given in the file) is the main feature; backtest on many windows, expect window variance (sd 0.09).
 - L6 regime shift: test exact time-mirror/negation of the last block first; here day 791 = day 730.
-
