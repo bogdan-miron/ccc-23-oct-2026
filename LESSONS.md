@@ -21,6 +21,7 @@ Format: ID (level, date) what | cost | rule. Newest entries at the end of each s
 - P-002 The story carries clues (L3 species behaviors, L6 "wind opposite, worms backwards"). | rule: never strip story text, quote clues in SPEC.md.
 - P-003 Cover pages are image-only; OCR of them is noise (filtered).
 - E-013 (L5) solve() for L5 (load 1.9M rows, features for 140 cutoffs, 3 LightGBM fits) took 158 s through device_bash, cap 180 s. | rule: compute features once per cutoff and share across seeds (done); if it grows, cache the trained models/predictions with disk_cache or drop to 2 seeds. L6 should reuse the fitted pipeline, not refit blindly.
+- E-014 (contest-day setup, 2026-10-23) Cold VM: home disk /sessions had only 280 MB free (9.8G, 9.0G used by something outside the session dir), so `setup_env.sh core` died with "No space left on device" while extracting wheels. Root disk /tmp had 4.5 GB free. | fixed by hand: ~/cfenv and ~/.cache are symlinks to /tmp/cfbig/{cfenv,cache}; venv, core (2m25s), torch (39s), verify (17s) all passed. After torch about 1.6 GB is left on / : the `extra` stage (transformers, cv2, timm...) may not fit, check df first. rule: on a fresh VM run df -h ~ /tmp before setup; if ~ is nearly full, symlink env and cache to /tmp.
 
 ## Data traps seen (migratory-birds)
 - D-001 Number words in numeric columns ("seventeen") in L1 files a and e; fixed in all_data_from_level_1.in. | cio.read_table reports and fixes.
