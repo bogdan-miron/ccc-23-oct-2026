@@ -66,3 +66,7 @@ Format: ID (level, date) what | cost | rule. Newest entries at the end of each s
 - E-016 (dry run end) Contest-day setup for the new Cowork window: put the challenge folder INSIDE the cloudflight repo folder (so CLAUDE.md, tools and skills are loaded), unzip or drop levels as <challenge>/level-N/, start with the contest prompt from knowledge/kickoff_prompts.md. Run `scan.py <challenge>` only (the --upto blind mode is for dry runs).
 - Q-005 (user, 2026-10-23, after the dry run) The dry run used last year's challenge. This year's challenge may differ in tasks, data and metrics; the format should mostly stay the same. | rule: treat these lessons and the migratory-birds patterns as priors to test, stay flexible, read every PDF as new (also written at the top of CLAUDE.md).
 
+
+## Contest day (today_challenge)
+- C-001 (L1, 2026-10-23) This year's L1 is a turn-based board game (Colony: One, 8x8, Kernel and Ping, 3 scenes on a website), not a data task. The folder had only level-1.pdf, no in_/out_ files, answers are played on the site. | wrote solutions/today_challenge/l1_solver.py (stdlib, brute force over both 2-action turns, strict = survives a full enemy turn). rule: when no data files exist, read the rules, model the game, brute force it, ask the user for each scene as text or screenshot.
+- E-015 (2026-10-23) VM was reset mid-session: /tmp/cfbig vanished, ~/cfenv symlink dangling; `setup_env.py core` timed out 3 times at 178 s with a cold uv cache (earlier run took 2m25s). Env not rebuilt yet because L1 needs none.

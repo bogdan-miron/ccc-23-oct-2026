@@ -1,4 +1,4 @@
-# Everything is ignored by default; only the kit is tracked. Contest data, PDFs, per-person solutions, outputs and notebooks stay local.
+# Everything is ignored by default; only the kit is tracked. Contest data, PDFs, outputs and notebooks stay local. Solutions are tracked.
 /*
 !/.gitignore
 !/.gitattributes
@@ -22,7 +22,6 @@
 !/notebooks/
 !/submissions/
 # working state inside tracked dirs
-/solutions/*/
 /notes/*
 /notebooks/*
 /submissions/*
